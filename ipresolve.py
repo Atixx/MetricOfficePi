@@ -10,12 +10,12 @@ import json
 
 
 def post(mac_address):
-  # print("This MAC has left: "+mac_address)
+  print("This MAC has left: "+mac_address)
   headers = {'content-type': 'application/json'}
   url = 'http://posttestserver.com/post.php'
   payload = { 'MAC Address' : mac_address }
   response = requests.post(url, data = json.dumps(payload), headers = headers)
-  print(response.text)
+  # print(response.text)
 
 def verifyConnection(mac_address):
 
@@ -41,5 +41,3 @@ if __name__ == '__main__':
 
  # tiempo o registro a tshark (si encontro, entra de nuevo pero despeus de un timeout de 60 sec)
 
-
-      
